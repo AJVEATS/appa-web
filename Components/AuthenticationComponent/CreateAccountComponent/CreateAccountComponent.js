@@ -2,11 +2,15 @@
 import { useState } from "react";
 
 
-const CreateAccountComponent = () => {
+const CreateAccountComponent = ({ changeComponent }) => {
+
+    const CreateAccount = () => {
+        console.log('CreateAccount');
+    };
 
     return (
-        <div class='flex flex-wrap py-8 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 h-fit'>
-            <p class='text-black w-full' >Create an account</p>
+        <div>
+            <p >Create an account</p>
             <form>
                 <input
                     name='createAcccountEmail'
@@ -21,8 +25,22 @@ const CreateAccountComponent = () => {
                     type='password'
                     placeholder='Confirm Password' />
             </form>
+            <div>
+                <button
+                    type='button'
+                    value=''
+                    onClick={() => CreateAccount()}>
+                    Create account
+                </button>
+                <button
+                    type='button'
+                    value=''
+                    onClick={() => changeComponent('LoginComponent')}>
+                    Already a member
+                </button>
+            </div>
         </div>
     )
 }
 
-export default CreateAccountComponent
+export default CreateAccountComponent;

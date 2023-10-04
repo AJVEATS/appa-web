@@ -5,11 +5,26 @@ import LoginComponent from "./LoginComponent/LoginComponent";
 
 
 const AuthenticationComponent = () => {
+    const [currentComponent, setCurrentComponent] = useState('CreateAccountComponent');
+
+    const handleCurrentComponent = () => {
+
+        if (currentComponent === 'CreateAccountComponent') {
+            return (
+                <CreateAccountComponent
+                    changeComponent={setCurrentComponent} />
+            );
+        } else if (currentComponent === 'LoginComponent') {
+            return (
+                <LoginComponent
+                    changeComponent={setCurrentComponent} />
+            );
+        };
+    };
 
     return (
         <div>
-            <CreateAccountComponent />
-            <LoginComponent />
+            {handleCurrentComponent()}
         </div>
     )
 };

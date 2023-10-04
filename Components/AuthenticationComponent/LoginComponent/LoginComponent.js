@@ -2,11 +2,15 @@
 import { useState } from "react";
 
 
-const LoginComponent = () => {
+const LoginComponent = ({ changeComponent }) => {
+
+    const login = () => {
+        console.log('login');
+    };
 
     return (
-        <div class='flex flex-wrap py-8 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 h-fit'>
-            <p class='text-black'>LoginComponent</p>
+        <div>
+            <p>LoginComponent</p>
             <form>
                 <input
                     name='loginEmail'
@@ -17,6 +21,17 @@ const LoginComponent = () => {
                     type='password'
                     placeholder='Password' />
             </form>
+            <button
+                type='button'
+                value=''
+                onClick={() => login()}>login</button>
+
+            <button
+                type='button'
+                value=''
+                onClick={() => changeComponent('CreateAccountComponent')}>
+                I'm new here
+            </button>
         </div>
     )
 };

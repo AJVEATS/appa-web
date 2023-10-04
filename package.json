@@ -12,12 +12,10 @@
     "firebase": "^10.4.0",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "react-tooltip": "^5.21.4"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest"
+    "postcss": "latest"
   }
 }
